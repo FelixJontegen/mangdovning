@@ -1,0 +1,251 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700');
+// Set your brand colors
+$black:        hsl(0, 0%, 4%) !default
+$black-bis:    hsl(0, 0%, 7%) !default
+$black-ter:    hsl(0, 0%, 14%) !default
+
+$grey-darker:  hsl(0, 0%, 21%) !default
+$grey-dark:    hsl(0, 0%, 29%) !default
+$grey:         hsl(0, 0%, 48%) !default
+$grey-light:   hsl(0, 0%, 71%) !default
+$grey-lighter: hsl(0, 0%, 86%) !default
+$grey-lightest: hsl(0, 0%, 93%) !default
+
+$white-ter:    hsl(0, 0%, 96%) !default
+$white-bis:    hsl(0, 0%, 98%) !default
+$white:        hsl(0, 0%, 100%) !default
+
+//$orange:       hsl(14,  100%, 53%) !default
+//$yellow:       hsl(48,  100%, 67%) !default
+//$green:        hsl(141, 53%,  53%) !default
+//$turquoise:    hsl(171, 100%, 41%) !default
+//$cyan:         hsl(204, 71%,  53%) !default
+//$blue:         hsl(217, 71%,  53%) !default
+$purple:       hsl(271, 100%, 71%) !default
+//$red:          hsl(348, 86%, 61%) !default
+// Update Bulma's global variables
+
+$blue:         hsl(208, 55%,  45%) !default
+$orange:       hsl(14,  100%, 53%) !default
+$yellow:       hsl(33, 97%,  55%) !default
+$green:        hsl(94, 63%,  59%) !default
+$turquoise:    hsl(162, 66%, 46%) !default
+$cyan:         hsl(204, 71%,  53%) !default
+$orange:       hsl(33, 97%,  55%) !default
+$dark-orange:  hsl(21, 94, 56%) !default
+$red:          hsl(359, 97%, 62%) !default
+
+
+// Typography
+$family-sans-serif: "Quicksand", sans-serif !default;
+$family-monospace: monospace !default
+$render-mode: optimizeLegibility !default
+
+$size-1: 3rem !default
+$size-2: 2.5rem !default
+$size-3: 2rem !default
+$size-4: 1.5rem !default
+$size-5: 1.25rem !default
+$size-6: 1rem !default
+$size-7: 0.75rem !default
+
+$weight-light: 300 !default
+$weight-normal: 400 !default
+$weight-medium: 500 !default
+$weight-semibold: 600 !default
+$weight-bold: 700 !default
+
+// Spacing
+$block-spacing: 1.5rem !default
+
+// Responsiveness
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap) !default
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap) !default
+$widescreen-enabled: true !default
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap) !default
+$fullhd-enabled: true !default
+
+// Miscellaneous
+$easing: ease-out !default
+$radius-small: 2px !default
+$radius: 4px !default
+$radius-large: 6px !default
+$radius-rounded: 290486px !default
+$speed: 86ms !default
+
+// Flags
+$variable-columns: true !default
+
+
+$primary: $blue !default
+$info: $turquoise !default
+$success: $green !default
+$warning: $dark-orange !default
+$danger: $red !default
+
+$light: $white-ter !default
+$dark: $grey-darker !default
+
+// Invert colors
+$orange-invert: findColorInvert($orange) !default
+$yellow-invert: findColorInvert($yellow) !default
+$green-invert: findColorInvert($green) !default
+$turquoise-invert: findColorInvert($turquoise) !default
+$cyan-invert: findColorInvert($cyan) !default
+$blue-invert: findColorInvert($blue) !default
+$purple-invert: findColorInvert($purple) !default
+$red-invert: findColorInvert($red) !default
+
+$primary-invert: findColorInvert($primary) !default
+$primary-light: findLightColor($primary) !default
+$primary-dark: findDarkColor($primary) !default
+$info-invert: findColorInvert($info) !default
+$info-light: findLightColor($info) !default
+$info-dark: findDarkColor($info) !default
+$success-invert: findColorInvert($success) !default
+$success-light: findLightColor($success) !default
+$success-dark: findDarkColor($success) !default
+$warning-invert: findColorInvert($warning) !default
+$warning-light: findLightColor($warning) !default
+$warning-dark: findDarkColor($warning) !default
+$danger-invert: findColorInvert($danger) !default
+$danger-light: findLightColor($danger) !default
+$danger-dark: findDarkColor($danger) !default
+$light-invert: findColorInvert($light) !default
+$dark-invert: findColorInvert($dark) !default
+
+// General colors
+$scheme-main: $white !default
+$scheme-main-bis: $white !default
+$scheme-main-ter: $white-ter !default
+$scheme-invert: $black !default
+$scheme-invert-bis: $black-bis !default
+$scheme-invert-ter: $black-ter !default
+
+$background: $white-ter !default
+
+$border: $grey-lighter !default
+$border-hover: $grey-light !default
+$border-light: $grey-lightest !default
+$border-light-hover: $grey-light !default
+
+// Text colors
+$text: $grey-dark !default
+$text-invert: findColorInvert($text) !default
+$text-light: $grey !default
+$text-strong: $grey-darker !default
+
+// Code colors
+$code: $red !default
+$code-background: $background !default
+
+$pre: $text !default
+$pre-background: $background !default
+
+// Link colors
+$link: $blue !default
+$link-invert: findColorInvert($link) !default
+$link-light: findLightColor($link) !default
+$link-dark: findDarkColor($link) !default
+$link-visited: $purple !default
+
+$link-hover: $grey-darker !default
+$link-hover-border: $grey-light !default
+
+$link-focus: $grey-darker !default
+$link-focus-border: $blue !default
+
+$link-active: $grey-darker !default
+$link-active-border: $grey-dark !default
+
+// Typography
+$family-primary: $family-sans-serif !default
+$family-secondary: $family-sans-serif !default
+$family-code: $family-monospace !default
+
+$size-small: $size-7 !default
+$size-normal: $size-6 !default
+$size-medium: $size-5 !default
+$size-large: $size-4 !default
+
+// Lists and maps
+$custom-colors: null !default
+$custom-shades: null !default
+
+
+
+//table
+$table-color: $text-strong !default
+$table-background-color: $scheme-main !default
+$table-cell-border: 1px solid $border !default
+$table-cell-border-width: 0 0 1px !default
+$table-cell-padding: 2.5em 0.5em !default
+$table-cell-heading-color: $text-strong !default
+
+$table-head-cell-border-width: 0 0 2px !default
+$table-head-cell-color: $text-strong !default
+$table-foot-cell-border-width: 2px 0 0 !default
+$table-foot-cell-color: $text-strong !default
+
+$table-head-background-color: transparent !default
+$table-body-background-color: transparent !default
+$table-foot-background-color: transparent !default
+
+$table-row-hover-background-color: $scheme-main-bis !default
+
+$table-row-active-background-color: $primary !default
+$table-row-active-color: $primary-invert !default
+
+$table-striped-row-even-background-color: $scheme-main-bis !default
+$table-striped-row-even-hover-background-color: $scheme-main-ter !default
+
+$footer-color: false !default;
+
+$footer-padding: 10rem 1.5rem 1rem !default;
+#master_table td {
+  vertical-align: middle;
+}
+
+#master_table tr[disabled] td {
+  filter: blur(6px) grayscale(65%);
+  pointer-events: none;
+  cursor: not-allowed;
+  transition: all .4s ease;
+  transition-delay: 1s;
+}
+
+
+.hide { display:none; }
+
+.katex{
+  white-space: nowrap;
+}
+.answer{
+  min-width: 100px;
+  align-content: right;
+}
+
+@import "./node_modules/bulma/sass/utilities/_all.sass";
+@import "./node_modules/bulma/sass/base/_all.sass";
+@import "./node_modules/bulma/sass/elements/_all.sass";
+@import "./node_modules/bulma/sass/form/_all.sass";
+@import "./node_modules/bulma/sass/grid/_all.sass";
+@import "./node_modules/bulma/sass/components/_all.sass";
+@import "./node_modules/bulma/sass/layout/_all.sass";
+
+@import './node_modules/bulma-extensions/bulma-switch/src/sass/index.sass';
+@import './node_modules/bulma-extensions/bulma-slider/src/sass/index.sass';
+@import './node_modules/bulma-extensions/bulma-divider/src/sass/index.sass';
+@import './node_modules/bulma-extensions/bulma-tooltip/src/sass/index.sass';
+
+//@import './node_modules/bulma-extensions/bulma-checkradio/src/sass/index.sass';
+//@import './node_modules/bulma-checkradio/src/sass/index.sass';
